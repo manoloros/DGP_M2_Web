@@ -7,15 +7,13 @@
   </title>
 </head>
 <body>
-</body>
+
 
 <?php
   session_set_cookie_params(0);
   session_start();
   require("php/construyeCabecera.php");
 ?>
-
-<input type="text" name="buscar_nombre_ruta">
 
 <?php
   $con=mysqli_connect("localhost","root","","sombrilla");
@@ -41,5 +39,5 @@
   
   echo "</table>";
 ?>
-
+</body>
 </html>

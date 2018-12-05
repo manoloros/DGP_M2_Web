@@ -1,42 +1,42 @@
 body{
-	margin: 0;
-	font-family: 'Alegreya Sans', sans-serif;
-	font-weight:100;
+  margin: 0;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-weight:100;
 }
 
- /* Navigation bar position */
+/* Navigation bar position */
 .container{
-	width: 100%;
-	margin: 0 auto;
-	padding-top: 7px;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 7px;
 }
 
 /* Navigation bar colour */
 header{
-	background-color: rgb(51,51,51);
-	width: 100%;
-	height: 43px;
+  background-color: rgb(51,51,51);
+  width: 80%;
+  height: 43px;
 }
 
 /* Navigation bar*/
 nav{
-	position: relative;
-	left: 25%;
-	margin-top: 4px;
+  position: relative;
+  left: 25%;
+  margin-top: 4px;
 }
 
 /* Navigation elementos*/
 nav a{
-	text-decoration: none;
-	color: white;
-	margin-right: 70px;
-	font-size: 15px;
+  text-decoration: none;
+  color: white;
+  margin-right: 70px;
+  font-size: 15px;
 }
 
 /* Navigation elemento escogido*/
 nav a:hover{
-	opacity: .5;
-	transition: .3s;
+  opacity: .5;
+  transition: .3s;
 }
 
 /* Login Page */
@@ -100,12 +100,35 @@ nav a:hover{
   font-weight: 500;
 }
 
-
-
 table {
+  border: 1px solid #ccc;
   border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 80%;
+  table-layout: fixed;
+  text-align: center;
 }
 
-table, th, td {
-  border: 1px solid black;
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: center;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
 }

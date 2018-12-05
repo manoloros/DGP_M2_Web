@@ -17,7 +17,7 @@
 <body>
   <div class="contenedor1">
     <div id="textoInicio" > Bienvenido a la pagina de Administracion de </div>
-    <div id="textoInicio2">GRANADAGO</div>
+    <div id="textoInicio2"> GRANADAGO </div>
   </div>
 </body>
 
