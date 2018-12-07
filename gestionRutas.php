@@ -30,7 +30,7 @@
     <th></th>
     <th></th>
   </tr>
-  </thead>";
+  </thead>
     
     <?php
   if ($num_filas > 0) {

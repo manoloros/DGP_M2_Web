@@ -15,31 +15,24 @@
   require("php/construyeCabecera.php");
 ?>
 
-<form method="post" action="<?php echo $_SERVER['PHP_SELF']?>">
-  <p>
-    <label>TempID:
-      <input type="text" name="TempID" value="<?php echo $fila['id']?>"></label>
-  </p>
-  <p>
-    <label>Name:
-      <input type="text" name="Name" value="<?php echo $fila['Nombre']?>"></label>
-  </p>
-  <p>
-    <label>CountryCode:
-      <input type="text" name="CountryCode" value="<?php echo $fila['CountryCode']?>"></label>
-  </p>
-  <p>
-    <label>Budget:
-      <input type="text" name="Budget" value="<?php echo $fila['Budget']?>"></label>
-  </p>
-  <p>
-    <label>Used:
-      <input type="text" name="Used" value="<?php echo $fila['Used']?>"></label>
-  </p>
-  <p>
-    <input type="submit" name="submit" value="Submit">
-  </p>
-</form>
+<?php
+  $id = $_GET['id'];
+  $con=mysqli_connect("localhost","root","","sombrilla");
+  $sql = "SELECT nombre, descripcion FROM  Ruta, DescripcionRuta WHERE Ruta.id = $id";
+  $resultado = mysqli_query ($con, $sql);
+  $fila = mysqli_fetch_assoc($resultado);
+?>
+
+<div class = 'formulario'>
+  
+  <p> ID: <?php echo $_GET['id'];?> </p>
+
+  <p> Nombre: <?php echo $fila['nombre']?> </p>
+
+  <p> Descripcion: <?php echo $fila['descripcion']?> </p>
+
+</div>
+
 
 </body>
 </html>
