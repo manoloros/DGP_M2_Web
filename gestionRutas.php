@@ -20,25 +20,27 @@
   $sql = "SELECT * FROM ruta ORDER BY id ASC";
   $resultado = mysqli_query ($con, $sql);
   $num_filas = mysqli_affected_rows($con);
-  
-  echo "<table class = 'tabla-ruta'>
+?>
+
+  <table class = 'tabla-ruta'>
   <thead>
   <tr>
     <th>Nombre de la Ruta</th>
     <th>ID</th>
-    <th>Numeros de Paradas</th>
+    <th></th>
+    <th></th>
   </tr>
   </thead>";
-  
+    
+    <?php
   if ($num_filas > 0) {
     while($fila = mysqli_fetch_assoc($resultado)) {
       echo "<tbody>";
       echo "<tr>";
       echo "<td>" . $fila['nombre'] . "</td>";
       echo "<td>" . $fila['id'] . "</td>";
-      echo "<td> <form>
-                  <input type=submit value=\"Modificar\" style=\"width:100%\">
-                 </form></td>";
+      echo "<td><a href=\"modificarRuta.php?id=" . $fila['id'] . "\"> <button type=\"button\"> Modificar </button> </a></td>";
+      echo "<td><a href=\"eliminarRuta.php?id=" . $fila['id'] . "\"> <button type=\"button\"> Eliminar </button> </a></td>";
       echo "</tr>";
       echo "</tbody>";
     }
