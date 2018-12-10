@@ -10,8 +10,6 @@
 <body>
 
 <?php
-  session_set_cookie_params(0);
-  session_start();
   require("php/construyeCabecera.php");
 ?>
 
@@ -33,13 +31,14 @@
       <input type="text" id="descripcion" name="descripcion" placeholder="Descripcion de la ruta"/>
     </div>
     
-    <input type="submit" class='boton-añadir' nname="submit" value="Añadir">
+    <input type="submit" class='boton-añadir' name="submit" value="Añadir">
   
   </div>
 </form>
 
 <?php
   if (isset($_POST['submit'])) {
+    echo "hola que talo soy colosal";
     $nombre = htmlspecialchars($_POST['nombre']);
     $descripcion = htmlspecialchars($_POST['descripcion']);
       
@@ -50,7 +49,7 @@
      } else {
   
        $con = mysqli_connect("localhost","root","","sombrilla");
-       echo "hola que talo soy colosal";
+       
        // Insertar el nombre de la ruta
        mysqli_query ($con, "INSERT INTO ruta (id, nombre) VALUES ('0', '$nombre')")
        or die(mysqli_error($con));

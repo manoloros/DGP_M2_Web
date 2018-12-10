@@ -13,13 +13,13 @@
   require("php/construyeCabecera.php");
 ?>
 
-<?php
-  $con=mysqli_connect("localhost","root","","sombrilla");
-  $sql = "SELECT * FROM ruta ORDER BY id ASC";
-  $resultado = mysqli_query ($con, $sql);
-  $num_filas = mysqli_affected_rows($con);
-?>
-
-
+<div class="contact-form">
+  <h3> Metodos de contacto</h3>
+  <div> Puedes contacar con nosotros a traves de los distintos medios de los que disponemos: </div>
+  <p></p>
+  <div> Correo: granadago@gmail.com </div>
+  <div> Telefono: 958 125 645 (Alberto)</div>
+</div>
 </body>
 </html>
+
