@@ -15,9 +15,10 @@
 ?>
 
 <body>
-  <div class="contenedor1">
-    <div id="textoInicio" > Bienvenido a la pagina de Administracion de </div>
-    <div id="textoInicio2"> GRANADAGO </div>
+  <div class="contenedorinicio">
+    <div id="textoinicio" > Bienvenido a la pagina de Administracion </div>
+    <div id="textoinicio2"> GRANADAGO </div>
+    <div id="textoinicio3"> En esta pagina podrá modificar el contenido de su aplicacion</div>
   </div>
 </body>
 
