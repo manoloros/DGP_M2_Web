@@ -21,7 +21,7 @@
   $fila = mysqli_fetch_assoc($resultado);
 ?>
 
-<form class ="mod-form" action='' method='post' accept-charset='UTF-8'>
+<form class ="mod-form" id="user-form" action='' method='post' accept-charset='UTF-8'>
   <div class = 'form-mod'>
     
     <h2> Formulario de modificacion de rutas </h2>
@@ -30,7 +30,7 @@
     
     <div class='form-row-nombre'>
       <label for='nombre'>Nombre</label>
-      <input  name="nombre" id="nombre" type="text" value="<?php echo $fila['nombre']?>"/>
+      <input type="text" id="nombre" name="nombre" value="<?php echo $fila['nombre']?>"/>
     </div>
 
     <div class='form-row'>
