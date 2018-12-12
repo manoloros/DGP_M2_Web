@@ -1,8 +1,8 @@
 <?php
   
   /*
-  eliminarRuta.PHP
-  Deletes a specific entry from the 'Ruta' table
+  eliminarLugar.PHP
+  Deletes a specific entry from the 'Parada' table
   */
   
   $con = mysqli_connect("localhost","root","","sombrilla");
@@ -13,7 +13,7 @@
     // get id value
     $id = $_GET['id'];
     // delete the entry
-    $result = mysqli_query($con, "DELETE FROM Ruta WHERE Ruta.id=$id")
+    $result = mysqli_query($con, "DELETE FROM parada WHERE id=$id")
     or die(mysqli_error($con));
     
     // redirect back to the view page

@@ -26,7 +26,7 @@
       <input  name="nombre" id="nombre" type="text" placeholder="Nombre de la ruta" value=""/>
     </div>
     
-    <div class='form-row'>
+    <div class='form-row-descripcion'>
       <label for='descripcion'>Descripcion</label>
       <input type="text" id="descripcion" name="descripcion" placeholder="Descripcion de la ruta"/>
     </div>
@@ -38,7 +38,6 @@
 
 <?php
   if (isset($_POST['submit'])) {
-    echo "hola que talo soy colosal";
     $nombre = htmlspecialchars($_POST['nombre']);
     $descripcion = htmlspecialchars($_POST['descripcion']);
       

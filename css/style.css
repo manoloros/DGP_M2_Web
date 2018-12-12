@@ -13,7 +13,7 @@ body{
 /* Navigation bar colour */
 header{
   background-color: rgb(51,51,51);
-  width: 80%;
+  width: 100%;
   height: 43px;
 }
 
@@ -83,23 +83,23 @@ nav a:hover{
 }
 
 .contenedorinicio {
-  text-align:center;
+  text-align:left;
   margin-top: 40px;
 }
 
 #textoinicio {
-  text-align:center;
+  text-align:left;
   font-size: 40px;
   font-weight: 500;
 }
 #textoinicio2 {
-  text-align:center;
+  text-align:left;
   font-size: 30px;
   font-weight: 500;
 }
 
 #textoinicio3 {
-  text-align:center;
+  text-align:left;
   font-size: 20px;
   font-weight: 200;
 }
@@ -138,11 +138,9 @@ table th {
 }
 
 .form-mod {
-  width: 500px;
-  height: 500px;
   padding: 25px;
-  margin-top: 25px;
-  margin-left: 25%;
+  margin-top: 1px;
+  margin-left: 10%;
 }
 
 .form-row-nombre {
@@ -172,7 +170,7 @@ table th {
   height: initial;
 }
 
-.form-row {
+.form-row-descripcion {
   margin-bottom: 40px;
   display: flex;
   justify-content: flex-start;
@@ -180,7 +178,7 @@ table th {
   flex-wrap: wrap;
 }
 
-.form-row input[type='text'] {
+.form-row-descripcion input[type='text'] {
   background-color: #FFFFFF;
   border: 1px solid #D6D9DC;
   border-radius: 3px;
@@ -189,11 +187,11 @@ table th {
   font-size: 14px;
 }
 
-.form-row label {
+.form-row-descripcion label {
   margin-bottom: 10px;
 }
-.form-row input[type='text'],
-.form-row textarea {
+.form-row-descripcion input[type='text'],
+.form-row-descripcion textarea {
   width: 400px;
   height: 200px;
   text-align: justify;
@@ -217,6 +215,13 @@ table th {
 .boton-eliminar {
   width: 150px;
   height: 25px;
+}
+
+.boton-modificar-form {
+  width: 150px;
+  height: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .contact-form {

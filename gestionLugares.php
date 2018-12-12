@@ -15,19 +15,21 @@
 
 <?php
   $con=mysqli_connect("localhost","root","","sombrilla");
-  $sql = "SELECT * FROM ruta ORDER BY id ASC";
+  $sql = "SELECT * FROM parada ORDER BY id ASC";
   $resultado = mysqli_query ($con, $sql);
   $num_filas = mysqli_affected_rows($con);
 ?>
 <div class ="cuadro-tabla">
-  <a href=añadirRuta.php> <button class = "boton-añadir" type="button"> Añadir Ruta Nueva </button> </a>
+  <a href=añadirLugar.php> <button class = "boton-añadir" type="button"> Añadir Parada Nueva </button> </a>
   <p></p>
 
   <table class = 'tabla-ruta'>
     <thead>
     <tr>
       <th>id</th>
-      <th>Nombre de la Ruta</th>
+      <th>Nombre de la Parada</th>
+      <th>Latitud</th>
+      <th>Longitud</th>
       <th></th>
       <th></th>
     </tr>
@@ -40,8 +42,10 @@
           echo "<tr>";
           echo "<td>" . $fila['id'] . "</td>";
           echo "<td>" . $fila['nombre'] . "</td>";
-          echo "<td><a href=\"modificarRuta.php?id=" . $fila['id'] . "\"> <button class =\"boton-modificar\" type=\"button\"> Modificar </button> </a></td>";
-          echo "<td><a href=\"eliminarRuta.php?id=" . $fila['id'] . "\"> <button class =\"boton-eliminar\" type=\"button\"> Eliminar </button> </a></td>";
+          echo "<td>" . $fila['latitud'] . "</td>";
+          echo "<td>" . $fila['longitud'] . "</td>";
+          echo "<td><a href=\"modificarLugar.php?id=" . $fila['id'] . "\"> <button class =\"boton-modificar\" type=\"button\"> Modificar </button> </a></td>";
+          echo "<td><a href=\"eliminarLugar.php?id=" . $fila['id'] . "\"> <button class =\"boton-eliminar\" type=\"button\"> Eliminar </button> </a></td>";
           echo "</tr>";
           echo "</tbody>";
         }
