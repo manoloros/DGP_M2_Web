@@ -16,7 +16,7 @@
 <?php
   $id_ruta = $_GET['id'];
   $con = mysqli_connect("localhost","root","","sombrilla");
-  $sql = "SELECT nombre, descripcion FROM  Ruta, DescripcionRuta WHERE Ruta.id = $id_ruta";
+  $sql = "SELECT nombre, descripcion FROM  Ruta, DescripcionRuta WHERE Ruta.id = $id_ruta and Ruta.id = DescripcionRuta.ruta and idioma = '0'";
   $resultado = mysqli_query ($con, $sql);
   $fila = mysqli_fetch_assoc($resultado);
 ?>
@@ -45,17 +45,17 @@
         <th>Parada</th>
         <th>Latitud</th>
         <th>Longitud</th>
+        <th>Orden</th>
         <th></th>
       </tr>
       </thead>
       
     <?php
       // Busqueda de las paradas de una ruta
-      $sql = "SELECT * FROM  parada";
+      $sql = "SELECT * FROM  ruta, pertenece, parada WHERE ruta.id = pertenece.id_ruta and ruta.id = $id_ruta and pertenece.id_parada = parada.id";
       $resultado = mysqli_query ($con, $sql);
-      $fila = mysqli_fetch_assoc($resultado);
       $num_filas = mysqli_affected_rows($con);
-      
+
       if ($num_filas > 0) {
         while ($fila = mysqli_fetch_assoc($resultado)) {
           echo "<tbody>";
@@ -64,6 +64,7 @@
           echo "<td>" . $fila['nombre'] . "</td>";
           echo "<td>" . $fila['latitud'] . "</td>";
           echo "<td>" . $fila['longitud'] . "</td>";
+          echo "<td>" . $fila['orden'] . "</td>";
           echo "<td><a href=\"eliminarLugarParada.php?id=" . $fila['id'] . "&id_ruta=$id_ruta\"> <button class =\"boton-eliminar\" type=\"button\"> Eliminar </button> </a></td>";
           echo "</tr>";
           echo "</tbody>";

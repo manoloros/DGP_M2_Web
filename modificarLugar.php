@@ -16,7 +16,7 @@
 <?php
   $id_parada = $_GET['id'];
   $con = mysqli_connect("localhost","root","","sombrilla");
-  $sql = "SELECT * FROM  parada, descripcionparada WHERE parada.id = $id_parada";
+  $sql = "SELECT * FROM  parada, descripcionparada WHERE parada.id = $id_parada and parada.id = descripcionparada.parada and idioma ='0'";
   $resultado = mysqli_query ($con, $sql);
   $fila = mysqli_fetch_assoc($resultado);
 ?>

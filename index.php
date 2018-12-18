@@ -8,6 +8,7 @@
 	<script type="text/javascript" src="scripts/scripts.js"></script>
 </head>
 <body>
+<div class = "contenedorinicio" id = "textoinicio">  Inicio de Sesión </div>
   <div class="login-page">
     <div class="form">
       <form class ="login-form" action='login.php' id = 'formulario' method='post' accept-charset='UTF-8'>
@@ -21,10 +22,10 @@
           <label for='password' >Contraseña:</label>
           <input type='password' name='password' maxlength="15" />
 
-          <input type='submit' name='Submit' value='Login' />
+          <button type='submit' class="boton-modificar" type='submit' name='Submit' value='Login'> Iniciar Sesion </button>
         </fieldset>
-      </form>
     </div>
   </div>
+</form>
 </body>
 </html>

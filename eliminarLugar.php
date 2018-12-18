@@ -13,12 +13,16 @@
     // get id value
     $id = $_GET['id'];
     // delete the entry
+    $result = mysqli_query($con, "DELETE FROM pertenece WHERE id_parada = $id")
+    or die(mysqli_error($con));
+    $result = mysqli_query($con, "DELETE FROM descripcionparada WHERE parada = $id")
+    or die(mysqli_error($con));
     $result = mysqli_query($con, "DELETE FROM parada WHERE id=$id")
     or die(mysqli_error($con));
     
     // redirect back to the view page
-    header("Location: gestionRuta.php");
+    header("Location: gestionLugares.php");
   } else {
-    header("Location: gestionRuta.php");
+    header("Location: gestionLugares.php");
   }
 ?>
