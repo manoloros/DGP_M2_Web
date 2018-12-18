@@ -24,7 +24,7 @@
 <form class ="mod-form" id="user-form" action='' method='post' accept-charset='UTF-8'>
   <div class = 'form-mod'>
     
-    <h2> Formulario de modificacion de rutas </h2>
+    <h2> Modificar una ruta </h2>
     <label for='id'></label>
     <input type="hidden" id ="id" name="id" value="<?php echo $id_ruta; ?>"/>
     
@@ -73,7 +73,8 @@
       echo "</table>";
     ?>
      
-      <input type="submit" class="boton-modificar-form" name="submit" value="Modificar">
+      <input type="submit" class="boton-modificar-form" name="submit" value="Modificar Ruta">
+      <input type="button" class = "boton-atras" value="Atrás" onclick="history.back()">
     </div>
 </form>
 
@@ -95,7 +96,7 @@
         or die(mysqli_error($con));
         mysqli_query ($con, "UPDATE DescripcionRuta SET descripcion='$descripcion' WHERE ruta='$id' and idioma='0'")
         or die(mysqli_error($con));
-
+        $modificado = true;
         header("Location: modificarRuta.php?id=$id");
       }
     } else {
@@ -103,6 +104,8 @@
       echo 'Error!';
     }
   }
+  
+ 
 ?>
 
 </body>

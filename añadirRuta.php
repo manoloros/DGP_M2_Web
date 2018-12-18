@@ -16,7 +16,7 @@
 <form class ="mod-form" action='' method='post' accept-charset='UTF-8'>
   <div class = 'form-mod'>
 
-    <h2> Formulario de adición de rutas </h2>
+    <h2> Añadir una ruta nueva </h2>
     
     <label for='id'></label>
     <input type="hidden" id = "id" name="id" value="<?php echo $id; ?>"/>

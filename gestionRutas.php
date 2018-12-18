@@ -19,10 +19,11 @@
   $resultado = mysqli_query ($con, $sql);
   $num_filas = mysqli_affected_rows($con);
 ?>
+<div class="encabezado-pagina"><h2> Tabla de Rutas </h2></div>
 <div class ="cuadro-tabla">
   <a href=añadirRuta.php> <button class = "boton-añadir" type="button"> Añadir Ruta Nueva </button> </a>
     <p></p>
-
+    
     <table class = 'tabla-ruta'>
     <thead>
       <tr>
@@ -49,6 +50,7 @@
   
   echo "</table>";
 ?>
+
 </div>
 </body>
 </html>

@@ -19,6 +19,7 @@
   $resultado = mysqli_query ($con, $sql);
   $num_filas = mysqli_affected_rows($con);
 ?>
+<div class ="encabezado-pagina"> <h2> Tabla de Lugares </h2> </div>
 <div class ="cuadro-tabla">
   <a href=añadirLugar.php> <button class = "boton-añadir" type="button"> Añadir Parada Nueva </button> </a>
   <p></p>

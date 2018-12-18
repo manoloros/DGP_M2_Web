@@ -24,7 +24,7 @@
 <form class ="mod-form" id="user-form" action='' method='post' accept-charset='UTF-8'>
   <div class = 'form-mod'>
 
-    <h2> Formulario de modificacion de paradas </h2>
+    <h2> Modificar un lugar </h2>
     <label for='id'></label>
     <input type="hidden" id ="id" name="id" value="<?php echo $id_parada; ?>"/>
 
@@ -48,8 +48,10 @@
       <input type="text" id="descripcion" name="descripcion" value="<?php echo $fila['descripcion']?>"/>
     </div>
 
-    <input type="submit" class="boton-modificar-form" name="submit" value="Modificar">
+    <input type="submit" class="boton-modificar-form" name="submit" value="Modificar Lugar">
 
+
+    <input type="button" class = "boton-atras" value="Atrás" onclick="history.back()">
   </div>
 </form>
 
@@ -86,6 +88,8 @@
     }
   }
 ?>
+
+
 
 </body>
 </html>

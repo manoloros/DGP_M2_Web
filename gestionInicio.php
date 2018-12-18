@@ -16,9 +16,9 @@
 
 <body>
   <div class="form-mod">
-    <div id="textoinicio" > Bienvenido a la pagina de Administracion </div>
+    <div id="textoinicio2" > Bienvenido a la pagina de Administracion </div>
     <div id="textoinicio2"> GRANADAGO </div>
-    <div id="textoinicio3"> En esta pagina podrá modificar el contenido de su aplicacion</div>
+    <div id="textoinicio2"> En esta pagina podrá modificar el contenido de su aplicacion</div>
   </div>
 </body>
 
