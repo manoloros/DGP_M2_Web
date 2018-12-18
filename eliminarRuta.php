@@ -13,12 +13,23 @@
     // get id value
     $id = $_GET['id'];
     // delete the entry
+    $result = mysqli_query($con, "DELETE FROM AccesibilidadRuta WHERE id_ruta=$id")
+    or die(mysqli_error($con));
+    $result = mysqli_query($con, "DELETE FROM Agrupado WHERE id_ruta=$id")
+    or die(mysqli_error($con));
+    $result = mysqli_query($con, "DELETE FROM HistorialRuta WHERE id_ruta=$id")
+    or die(mysqli_error($con));
+    $result = mysqli_query($con, "DELETE FROM ValoraRuta WHERE ruta=$id")
+    or die(mysqli_error($con));
+    $result = mysqli_query($con, "DELETE FROM DescripcionRuta WHERE ruta=$id")
+    or die(mysqli_error($con));
     $result = mysqli_query($con, "DELETE FROM Ruta WHERE Ruta.id=$id")
     or die(mysqli_error($con));
+    
 
     // redirect back to the view page
-    header("Location: gestionRuta.php");
+    header("Location: gestionRutas.php");
   } else {
-    header("Location: gestionRuta.php");
+    header("Location: gestionRutas.php");
   }
 ?>
