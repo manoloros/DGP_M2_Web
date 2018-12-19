@@ -93,8 +93,6 @@
         $mensaje = 'Rellena todos los campos, por favor.';
         echo "<div class='form-mod'><div class='mensaje-error'> $mensaje </div></div>";
       } else {
-        $mensaje = 'Ruta modificada correctamente.';
-        echo "<div class='form-mod'><div class='mensaje-correcto'> $mensaje </div></div>";
         mysqli_query ($con, "UPDATE Ruta SET nombre='$ruta' WHERE id='$id'")
         or die(mysqli_error($con));
         mysqli_query ($con, "UPDATE DescripcionRuta SET descripcion='$descripcion' WHERE ruta='$id' and idioma='0'")

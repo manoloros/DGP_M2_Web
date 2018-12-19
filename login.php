@@ -1,5 +1,5 @@
 <?php
-  session_start();
+
   
   function login() {
     
@@ -40,4 +40,6 @@
   if (isset($_POST['usuario']) && isset($_POST['password'])) {
     login();
   }
+  
+  session_start();
 ?>

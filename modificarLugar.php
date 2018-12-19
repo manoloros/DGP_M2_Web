@@ -49,8 +49,8 @@
     </div>
 
     <input type="submit" class="boton-modificar-form" name="submit" value="Modificar Lugar">
-    
     <input type="button" class = "boton-atras" value="Atrás" onclick="history.back()">
+    
   </div>
 </form>
 

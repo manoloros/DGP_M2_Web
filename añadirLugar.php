@@ -57,7 +57,7 @@
     // check that firstname/lastname fields are both filled in
     if ($nombre == '' || $latitud == '' || $longitud == '' || $descripcion == '') {
       // generate error message
-      $error = 'Rellena todos los campos, por favor.\'';
+      $error = 'Rellena todos los campos, por favor.';
     } else {
       
       $con = mysqli_connect("localhost","root","","sombrilla");
