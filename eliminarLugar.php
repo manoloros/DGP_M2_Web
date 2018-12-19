@@ -1,13 +1,9 @@
 <?php
   
-  /*
-  eliminarLugar.PHP
-  Deletes a specific entry from the 'Parada' table
-  */
-  
   $con = mysqli_connect("localhost","root","","sombrilla");
   $id = $_GET['id'];
-  
+
+  if(true) {
   // check if the 'id' variable is set in URL, and check that it is valid
   if (isset($_GET['id']) && is_numeric($_GET['id'])) {
     // get id value
@@ -28,12 +24,12 @@
     $result = mysqli_query($con, "DELETE FROM parada WHERE id=$id")
     or die(mysqli_error($con));
     
-    
     // redirect back to the view page
     header("Location: gestionLugares.php");
     exit;
   } else {
     header("Location: gestionLugares.php");
     exit;
+  }
   }
 ?>

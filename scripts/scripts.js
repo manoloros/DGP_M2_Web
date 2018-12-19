@@ -8,13 +8,13 @@ function YNconfirm() {
 function confirma_borrado_ruta() {
   if (window.confirm('Confirma que quieres borrar la ruta'))
   {
-    window.location.href = 'localhost/logout.php';
+    window.location.href = 'localhost/gestionRutas.php';
   }
 }
 
 function confirma_borrado_parada() {
   if (window.confirm('Confirma que quieres borrar la parada'))
   {
-    window.location.href = 'localhost/logout.php';
+    window.location.href = 'localhost/gestionLugares.php';
   }
 }

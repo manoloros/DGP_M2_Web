@@ -13,7 +13,7 @@
       <a href="gestionLugares.php">Lugares</a>
       <a href="gestionRutas.php">Rutas</a>
       <a href="Contacto.php">Contacto</a>
-      <a href='logout.php' onclick="return(YNconfirm())"> Cerrar Sesión </a>";
+      <a href='logout.php' onclick="return(YNconfirm())"> Cerrar Sesión </a>
     </nav>
   </div>
 </header>
