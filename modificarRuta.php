@@ -65,14 +65,14 @@
           echo "<td>" . $fila['latitud'] . "</td>";
           echo "<td>" . $fila['longitud'] . "</td>";
           echo "<td>" . $fila['orden'] . "</td>";
-          echo "<td><a href=\"eliminarLugarParada.php?id=" . $fila['id'] . "&id_ruta=$id_ruta\"> <button class =\"boton-eliminar\" type=\"button\"> Eliminar </button> </a></td>";
+          echo "<td><a href=\"eliminarLugarParada.php?id_parada=" . $fila['id'] . "&id_ruta=$id_ruta\"> <button class =\"boton-eliminar\" type=\"button\"> Eliminar de la ruta </button> </a></td>";
           echo "</tr>";
           echo "</tbody>";
         }
       }
       echo "</table>";
     ?>
-     
+      
       <input type="submit" class="boton-modificar-form" name="submit" value="Modificar Ruta">
       <input type="button" class = "boton-atras" value="Atrás" onclick="history.back()">
     </div>
@@ -96,7 +96,6 @@
         or die(mysqli_error($con));
         mysqli_query ($con, "UPDATE DescripcionRuta SET descripcion='$descripcion' WHERE ruta='$id' and idioma='0'")
         or die(mysqli_error($con));
-        $modificado = true;
         header("Location: modificarRuta.php?id=$id");
       }
     } else {
