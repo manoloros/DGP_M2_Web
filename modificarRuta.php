@@ -35,7 +35,7 @@
 
     <div class='form-row-descripcion'>
       <label for='descripcion'>Descripcion</label>
-      <input type="text" id="descripcion" name="descripcion" value="<?php echo $fila['descripcion']?>"/>
+      <textarea name="descripcion" id="descripcion" placeholder="Descripcion de la ruta"><?php echo $fila['descripcion']?></textarea>
     </div>
 
     <table class = 'tabla-ruta'>
@@ -45,14 +45,14 @@
         <th>Parada</th>
         <th>Latitud</th>
         <th>Longitud</th>
-        <th>Orden</th>
+        <th>Orden de Parada</th>
         <th></th>
       </tr>
       </thead>
       
     <?php
       // Busqueda de las paradas de una ruta
-      $sql = "SELECT * FROM  ruta, pertenece, parada WHERE ruta.id = pertenece.id_ruta and ruta.id = $id_ruta and pertenece.id_parada = parada.id";
+      $sql = "SELECT * FROM  ruta, pertenece, parada WHERE ruta.id = pertenece.id_ruta and ruta.id = $id_ruta and pertenece.id_parada = parada.id ORDER BY pertenece.orden ASC";
       $resultado = mysqli_query ($con, $sql);
       $num_filas = mysqli_affected_rows($con);
 
@@ -90,20 +90,23 @@
       // check that firstname/lastname fields are both filled in
       if ($ruta == '' || $descripcion == '') {
         // generate error message
-        $error = 'ERROR: Please fill in all required fields!';
+        $mensaje = 'Rellena todos los campos, por favor.';
+        echo "<div class='form-mod'><div class='mensaje-error'> $mensaje </div></div>";
       } else {
+        $mensaje = 'Ruta modificada correctamente.';
+        echo "<div class='form-mod'><div class='mensaje-correcto'> $mensaje </div></div>";
         mysqli_query ($con, "UPDATE Ruta SET nombre='$ruta' WHERE id='$id'")
         or die(mysqli_error($con));
         mysqli_query ($con, "UPDATE DescripcionRuta SET descripcion='$descripcion' WHERE ruta='$id' and idioma='0'")
         or die(mysqli_error($con));
         header("Location: modificarRuta.php?id=$id");
+        exit;
       }
     } else {
       // if the 'id' isn't valid, display an error
-      echo 'Error!';
+      echo 'Ha surgido un error inesperado.';
     }
   }
-  
  
 ?>
 

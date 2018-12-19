@@ -11,6 +11,7 @@
     $result = mysqli_query($con, "DELETE FROM pertenece WHERE id_parada=$id_parada and id_ruta=$id_ruta")
     or die(mysqli_error($con));
     header("Location: modificarRuta.php?id=" . $id_ruta);
+    exit;
   }
 ?>
 

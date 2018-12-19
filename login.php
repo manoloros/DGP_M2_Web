@@ -1,5 +1,4 @@
 <?php
-  session_set_cookie_params(0);
   session_start();
   
   function login() {
@@ -15,19 +14,25 @@
     $username = $_POST['usuario'];
     $sql = "SELECT * FROM usuario WHERE nombre = '$username'";
 		$resultado = mysqli_query ($con, $sql);
-		$num_filas = mysqli_affected_rows($con);
+		$fila = mysqli_affected_rows($con);
 
-		if ($num_filas > 0) {
-      $num_filas = mysqli_fetch_assoc($resultado);
+		if ($fila > 0) {
+      $fila = mysqli_fetch_assoc($resultado);
       
-			if ($_POST['password'] === $num_filas['contrasena']) {
+			if ($_POST['password'] === $fila['contrasena']) {
+        
         $_SESSION["id_usuario"] = $_POST['usuario'];
 				header("Location: gestionInicio.php");
+        exit;
+				exit;
 			} else {
         header("Location: index.php");
+        exit;
+        exit;
 			}
 		} else {
       header("Location: index.php");
+      exit;
       mysqli_close($con);
     }
 	}

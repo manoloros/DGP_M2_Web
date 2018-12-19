@@ -31,7 +31,9 @@
     
     // redirect back to the view page
     header("Location: gestionLugares.php");
+    exit;
   } else {
     header("Location: gestionLugares.php");
+    exit;
   }
 ?>

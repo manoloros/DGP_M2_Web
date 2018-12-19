@@ -28,11 +28,11 @@
     
     <div class='form-row-descripcion'>
       <label for='descripcion'>Descripcion</label>
-      <input type="text" id="descripcion" name="descripcion" placeholder="Descripcion de la ruta"/>
+      <textarea name="descripcion" id="descripcion" placeholder="Descripcion de la ruta"></textarea>
     </div>
     
     <input type="submit" class='boton-añadir' name="submit" value="Añadir">
-  
+    <input type="button" class = "boton-atras" value="Atrás" onclick="history.back()">
   </div>
 </form>
 
@@ -44,7 +44,7 @@
     // check that firstname/lastname fields are both filled in
      if ($nombre == '' || $descripcion == '') {
        // generate error message
-       $error = 'ERROR: Please fill in all required fields!';
+       $error = 'Rellena todos los campos, por favor.\'';
      } else {
   
        $con = mysqli_connect("localhost","root","","sombrilla");
@@ -64,6 +64,7 @@
        
        // Insertar la descripcion de la ruta
        header("Location: gestionRutas.php");
+       exit;
      }
   }
   ?>

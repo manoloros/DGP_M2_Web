@@ -45,12 +45,11 @@
 
     <div class='form-row-descripcion'>
       <label for='nombre'>Descripcion</label>
-      <input type="text" id="descripcion" name="descripcion" value="<?php echo $fila['descripcion']?>"/>
+      <textarea name="descripcion" id="descripcion" placeholder="Descripcion de la parada"><?php echo $fila['descripcion']?></textarea>
     </div>
 
     <input type="submit" class="boton-modificar-form" name="submit" value="Modificar Lugar">
-
-
+    
     <input type="button" class = "boton-atras" value="Atrás" onclick="history.back()">
   </div>
 </form>
@@ -69,7 +68,8 @@
       // check that firstname/lastname fields are both filled in
       if ($parada == '' || $latitud == '' || $longitud == '' || $descripcion == '') {
         // generate error message
-        $error = 'ERROR: Please fill in all required fields!';
+        $error = 'Rellena todos los campos, por favor.';
+        echo "<div class='form-mod'><div class='mensaje-error'> $error </div></div>";
       } else {
         mysqli_query ($con, "UPDATE parada SET nombre='$parada' WHERE id='$id_parada'")
         or die(mysqli_error($con));
@@ -81,15 +81,15 @@
         or die(mysqli_error($con));
         
         header("Location: modificarLugar.php?id=$id_parada");
+        exit;
       }
     } else {
       // if the 'id' isn't valid, display an error
-      echo 'Error!';
+      echo 'Ha surgido un error inesperado.';
     }
   }
+  
 ?>
-
-
 
 </body>
 </html>

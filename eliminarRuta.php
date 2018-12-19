@@ -29,7 +29,9 @@
 
     // redirect back to the view page
     header("Location: gestionRutas.php");
+    exit;
   } else {
     header("Location: gestionRutas.php");
+    exit;
   }
 ?>

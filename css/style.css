@@ -28,8 +28,8 @@ nav{
 nav a{
   text-decoration: none;
   color: white;
-  margin-right: 70px;
-  font-size: 15px;
+  margin-right: 100px;
+  font-size: 18px;
 }
 
 /* Navigation elemento escogido*/
@@ -42,7 +42,7 @@ nav a:hover{
 
 .login-page {
   width: 350px;
-  padding: 5% 0 0;
+  padding: 2% 0 0;
   margin: auto;
 }
 
@@ -74,11 +74,11 @@ nav a:hover{
 }
 
 .form input {
-  outline: 0;
-  background: #f2f2f2;
+  outline: 5px;
+  background: #cdcdcd;
   width: 100%;
-  border: 0;
-  margin: 0 0 20px;
+  border-radius: 4px;
+  margin: 5px 0 20px;
   padding: 5px;
   box-sizing: border-box;
   font-size: 14px;
@@ -160,11 +160,11 @@ table th {
   border-radius: 3px;
   width: 100%;
   padding: 7px;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .form-row-nombre label {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .form-row-nombre input[type='text'],
 .form-row-nombre textarea {
@@ -173,7 +173,7 @@ table th {
 }
 
 .form-row-descripcion {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
@@ -186,18 +186,23 @@ table th {
   border-radius: 3px;
   width: 100%;
   padding: 7px;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .form-row-descripcion label {
-  margin-bottom: 10px;
+  margin-bottom: 3px;
 }
 .form-row-descripcion input[type='text'],
 .form-row-descripcion textarea {
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-size: 15px;
   width: 400px;
   height: 200px;
-  text-align: justify;
-  white-space: normal;
+  padding: 5px 5px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: #ffffff;
+  resize: none;
 }
 
 .cuadro-tabla {
@@ -222,9 +227,6 @@ table th {
 .boton-modificar-form {
   width: 150px;
   height: 25px;
-
-  margin-top: 20px;
-  margin-bottom: 25px;
 }
 
 .contact-form {
@@ -239,12 +241,25 @@ table th {
 .boton-atras {
   width: 150px;
   height: 25px;
-  margin-top: 20px;
-  margin-bottom: 25px;
   margin-left: 200px;
 }
 
 .texto-aviso-verde{
   font-size: 200px;
   color: green;
+}
+
+.mensaje-error {
+  font-size: 16px;
+  color: red;
+}
+
+.mensaje-correcto {
+  font-size: 16px;
+  color: #61f241;
+}
+
+
+.tabla-ruta {
+  margin-bottom: 20px;
 }

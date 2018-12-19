@@ -13,10 +13,7 @@
       <a href="gestionLugares.php">Lugares</a>
       <a href="gestionRutas.php">Rutas</a>
       <a href="Contacto.php">Contacto</a>
-      <?php
-        if(isset($_SESSION["id_usuario"])) {
-          echo "<a Logueado como: $_SESSION[id_usuario] <button href='logout.php'> Logout </button></a>";
-        } ?>
+      <a href='logout.php' onclick="return(YNconfirm())"> Cerrar Sesión </a>";
     </nav>
   </div>
 </header>
