@@ -16,7 +16,7 @@
 <?php
   $id_parada = $_GET['id'];
   $con = mysqli_connect("91.121.86.72","dgppractica","dgp12345","dgp");
-  $sql = "SELECT * FROM  parada, descripcionparada WHERE parada.id = $id_parada and parada.id = descripcionparada.parada and idioma ='0'";
+  $sql = "SELECT * FROM  Parada, DescripcionParada WHERE Parada.id = $id_parada and Parada.id = DescripcionParada.parada and Idioma ='0'";
   $resultado = mysqli_query ($con, $sql);
   $fila = mysqli_fetch_assoc($resultado);
 ?>
@@ -71,13 +71,13 @@
         $error = 'Rellena todos los campos, por favor.';
         echo "<div class='form-mod'><div class='mensaje-error'> $error </div></div>";
       } else {
-        mysqli_query ($con, "UPDATE parada SET nombre='$parada' WHERE id='$id_parada'")
+        mysqli_query ($con, "UPDATE Parada SET nombre='$parada' WHERE id='$id_parada'")
         or die(mysqli_error($con));
-        mysqli_query ($con, "UPDATE parada SET latitud='$latitud' WHERE id='$id_parada'")
+        mysqli_query ($con, "UPDATE Parada SET latitud='$latitud' WHERE id='$id_parada'")
         or die(mysqli_error($con));
-        mysqli_query ($con, "UPDATE parada SET longitud='$longitud' WHERE id='$id_parada'")
+        mysqli_query ($con, "UPDATE Parada SET longitud='$longitud' WHERE id='$id_parada'")
         or die(mysqli_error($con));
-        mysqli_query ($con, "UPDATE descripcionparada SET descripcion='$descripcion' WHERE parada='$id_parada' and idioma='0'")
+        mysqli_query ($con, "UPDATE DescripcionParada SET descripcion='$descripcion' WHERE parada='$id_parada' and idioma='0'")
         or die(mysqli_error($con));
         
         header("Location: modificarLugar.php?id=$id_parada");

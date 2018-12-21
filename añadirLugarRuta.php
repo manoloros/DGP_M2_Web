@@ -13,7 +13,7 @@
   
     $con = mysqli_connect("91.121.86.72","dgppractica","dgp12345","dgp");
   
-    mysqli_query ($con, "INSERT INTO pertenece (id_ruta, id_parada, orden) VALUES ('$id_ruta', '$id_parada', '$orden')")
+    mysqli_query ($con, "INSERT INTO Pertenece (id_ruta, id_parada, orden) VALUES ('$id_ruta', '$id_parada', '$orden')")
     or die(mysqli_error($con));
     
     // redirect back to the view page

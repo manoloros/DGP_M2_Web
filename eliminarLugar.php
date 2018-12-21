@@ -8,9 +8,9 @@
     // get id value
     $id = $_GET['id'];
     // delete the entry
-    $result = mysqli_query($con, "DELETE FROM pertenece WHERE id_parada = $id")
+    $result = mysqli_query($con, "DELETE FROM Pertenece WHERE id_parada = $id")
     or die(mysqli_error($con));
-    $result = mysqli_query($con, "DELETE FROM descripcionparada WHERE parada = $id")
+    $result = mysqli_query($con, "DELETE FROM DescripcionParada WHERE parada = $id")
     or die(mysqli_error($con));
     $result = mysqli_query($con, "DELETE FROM HistorialParada WHERE id_parada=$id")
     or die(mysqli_error($con));
@@ -20,7 +20,7 @@
     or die(mysqli_error($con));
     $result = mysqli_query($con, "DELETE FROM ValoraParada WHERE parada=$id")
     or die(mysqli_error($con));
-    $result = mysqli_query($con, "DELETE FROM parada WHERE id=$id")
+    $result = mysqli_query($con, "DELETE FROM Parada WHERE id=$id")
     or die(mysqli_error($con));
     
     // redirect back to the view page

@@ -8,7 +8,7 @@
     $id_ruta = $_GET['id_ruta'];
     $id_parada = $_GET['id_parada'];
     // delete the entry
-    $result = mysqli_query($con, "DELETE FROM pertenece WHERE id_parada=$id_parada and id_ruta=$id_ruta")
+    $result = mysqli_query($con, "DELETE FROM Pertenece WHERE id_parada=$id_parada and id_ruta=$id_ruta")
     or die(mysqli_error($con));
     header("Location: modificarRuta.php?id=" . $id_ruta);
     exit;

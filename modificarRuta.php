@@ -16,7 +16,7 @@
 <?php
   $id_ruta = $_GET['id'];
   $con = mysqli_connect("91.121.86.72","dgppractica","dgp12345","dgp");
-  $sql = "SELECT nombre, descripcion FROM  Ruta, DescripcionRuta WHERE Ruta.id = $id_ruta and Ruta.id = DescripcionRuta.ruta and idioma = '0'";
+  $sql = "SELECT nombre, descripcion FROM  Ruta, DescripcionRuta WHERE Ruta.id = $id_ruta and Ruta.id = DescripcionRuta.ruta and Idioma = '0'";
   $resultado = mysqli_query ($con, $sql);
   $fila = mysqli_fetch_assoc($resultado);
 ?>
@@ -54,7 +54,7 @@
       
     <?php
       // Busqueda de las paradas de una ruta
-      $sql = "SELECT * FROM  ruta, pertenece, parada WHERE ruta.id = pertenece.id_ruta and ruta.id = $id_ruta and pertenece.id_parada = parada.id ORDER BY pertenece.orden ASC";
+      $sql = "SELECT * FROM  Ruta, Pertenece, Parada WHERE Ruta.id = Pertenece.id_ruta and Ruta.id = $id_ruta and Pertenece.id_parada = Parada.id ORDER BY Pertenece.orden ASC";
       $resultado = mysqli_query ($con, $sql);
       $num_filas = mysqli_affected_rows($con);
 

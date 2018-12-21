@@ -63,16 +63,16 @@
       $con = mysqli_connect("91.121.86.72","dgppractica","dgp12345","dgp");
       
       // Insertar el nombre de la ruta
-      mysqli_query ($con, "INSERT INTO parada (id, nombre, latitud, longitud) VALUES ('0', '$nombre', '$latitud','$longitud')")
+      mysqli_query ($con, "INSERT INTO Parada (id, nombre, latitud, longitud) VALUES ('0', '$nombre', '$latitud','$longitud')")
       or die(mysqli_error($con));
       
-      $resultado = mysqli_query ($con, "SELECT id FROM parada WHERE nombre='$nombre'");
+      $resultado = mysqli_query ($con, "SELECT id FROM Parada WHERE nombre='$nombre'");
       $fila = mysqli_fetch_assoc($resultado);
       $id = $fila['id'];
       
       echo "<div class='form-mod'> ID de la parada insertada: " . $id . "<div>";
       
-      mysqli_query ($con, "INSERT INTO descripcionparada (parada, idioma, descripcion) VALUES ($id, '0', '$descripcion')")
+      mysqli_query ($con, "INSERT INTO DescripcionParada (parada, idioma, descripcion) VALUES ($id, '0', '$descripcion')")
       or die(mysqli_error($con));
       
       // Insertar la descripcion de la ruta

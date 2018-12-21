@@ -50,10 +50,10 @@
        $con = mysqli_connect("91.121.86.72","dgppractica","dgp12345","dgp");
        
        // Insertar el nombre de la ruta
-       mysqli_query ($con, "INSERT INTO ruta (id, nombre) VALUES ('0', '$nombre')")
+       mysqli_query ($con, "INSERT INTO Ruta (id, nombre) VALUES ('0', '$nombre')")
        or die(mysqli_error($con));
        
-       $resultado = mysqli_query ($con, "SELECT id FROM ruta WHERE nombre='$nombre'");
+       $resultado = mysqli_query ($con, "SELECT id FROM Ruta WHERE nombre='$nombre'");
        $fila = mysqli_fetch_assoc($resultado);
        $id = $fila['id'];
        

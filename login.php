@@ -4,7 +4,7 @@
   function login() {
   
     $con = mysqli_connect("91.121.86.72","dgppractica","dgp12345","dgp");
-  
+    echo mysqli_error($con);
     // Check connection
     if (mysqli_connect_errno())
     {
@@ -12,7 +12,7 @@
     }
     
     $username = $_POST['usuario'];
-    $sql = "SELECT * FROM usuario WHERE nombre = '$username'";
+    $sql = "SELECT * FROM Usuario WHERE nombre = '$username'";
 		$resultado = mysqli_query ($con, $sql);
 		$fila = mysqli_affected_rows($con);
 
