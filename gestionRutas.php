@@ -14,7 +14,7 @@
 ?>
   
 <?php
-  $con = new mysqli("localhost", "dgppractica", "dgp12345","dgp");
+  $con = mysqli_connect("localhost","dgppractica","dgp12345","dgp");
   $sql = "SELECT * FROM ruta ORDER BY id ASC";
   $resultado = mysqli_query ($con, $sql);
   $num_filas = mysqli_affected_rows($con);

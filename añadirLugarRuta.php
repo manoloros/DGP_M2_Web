@@ -11,7 +11,7 @@
     $id_ruta = $_GET['id_ruta'];
     $id_parada = $_GET['id_parada'];
   
-    $con = new mysqli("localhost", "dgppractica", "dgp12345","dgp");
+    $con = mysqli_connect("localhost","dgppractica","dgp12345","dgp");
   
     mysqli_query ($con, "INSERT INTO pertenece (id_ruta, id_parada, orden) VALUES ('$id_ruta', '$id_parada', '$orden')")
     or die(mysqli_error($con));

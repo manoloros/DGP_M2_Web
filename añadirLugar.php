@@ -60,7 +60,7 @@
       $error = 'Rellena todos los campos, por favor.';
     } else {
       
-      $con = new mysqli("localhost", "dgppractica", "dgp12345","dgp");
+      $con = mysqli_connect("localhost","dgppractica","dgp12345","dgp");
       
       // Insertar el nombre de la ruta
       mysqli_query ($con, "INSERT INTO parada (id, nombre, latitud, longitud) VALUES ('0', '$nombre', '$latitud','$longitud')")
