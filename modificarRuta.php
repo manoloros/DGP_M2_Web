@@ -15,7 +15,7 @@
 
 <?php
   $id_ruta = $_GET['id'];
-  $con = mysqli_connect("localhost","dgppractica","dgp12345","dgp");
+  $con = new mysqli("localhost", "dgppractica", "dgp12345","dgp");
   $sql = "SELECT nombre, descripcion FROM  Ruta, DescripcionRuta WHERE Ruta.id = $id_ruta and Ruta.id = DescripcionRuta.ruta and idioma = '0'";
   $resultado = mysqli_query ($con, $sql);
   $fila = mysqli_fetch_assoc($resultado);

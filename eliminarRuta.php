@@ -5,7 +5,7 @@
   Deletes a specific entry from the 'Ruta' table
   */
   
-  $con = mysqli_connect("localhost","dgppractica","dgp12345","dgp");
+  $con = new mysqli("localhost", "dgppractica", "dgp12345","dgp");
   $id = $_GET['id'];
   
   // check if the 'id' variable is set in URL, and check that it is valid

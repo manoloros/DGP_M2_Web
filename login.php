@@ -3,12 +3,12 @@
   
   function login() {
   
-    $con = mysqli_connect("localhost","dgppractica","dgp12345","dgp");
+    $con = new mysqli("localhost", "dgppractica", "dgp12345","dgp");
   
     // Check connection
-    if (mysqli_connect_errno())
+    if ($con->connect_error)
     {
-      echo "Failed to connect to MySQL: " . mysqli_connect_error();
+      echo "Failed to connect to MySQL: " . $con->connect_error;
     }
     
     $username = $_POST['usuario'];
