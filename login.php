@@ -2,8 +2,8 @@
 
   
   function login() {
-    
-    $con=mysqli_connect("localhost","root","","sombrilla");
+  
+    $con = mysqli_connect("localhost","dgppractica","dgp12345","dgp");
   
     // Check connection
     if (mysqli_connect_errno())

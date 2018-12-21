@@ -93,17 +93,20 @@ nav a:hover{
   text-align:center;
   font-size: 40px;
   font-weight: 500;
+  margin-top: 25px;
 }
 #textoinicio2 {
   text-align:center;
   font-size: 30px;
   font-weight: 500;
+  margin-top: 25px;
 }
 
 #textoinicio3 {
   text-align:center;
   font-size: 20px;
   font-weight: 200;
+  margin-top: 25px;
 }
 
 table {
@@ -114,6 +117,7 @@ table {
   width: 80%;
   table-layout: fixed;
   text-align: center;
+  margin-top: 20px;
 }
 
 table caption {
@@ -212,6 +216,7 @@ table th {
 .boton-añadir {
   width: 150px;
   height: 25px;
+
 }
 
 .boton-modificar {

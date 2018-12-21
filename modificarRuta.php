@@ -15,7 +15,7 @@
 
 <?php
   $id_ruta = $_GET['id'];
-  $con = mysqli_connect("localhost","root","","sombrilla");
+  $con = mysqli_connect("localhost","dgppractica","dgp12345","dgp");
   $sql = "SELECT nombre, descripcion FROM  Ruta, DescripcionRuta WHERE Ruta.id = $id_ruta and Ruta.id = DescripcionRuta.ruta and idioma = '0'";
   $resultado = mysqli_query ($con, $sql);
   $fila = mysqli_fetch_assoc($resultado);
@@ -38,6 +38,8 @@
       <textarea name="descripcion" id="descripcion" placeholder="Descripcion de la ruta"><?php echo $fila['descripcion']?></textarea>
     </div>
 
+    <a href=añadirLugarRuta.php.php> <button class = "boton-añadir" type="button"> Añadir Parada </button> </a>
+    
     <table class = 'tabla-ruta'>
       <thead>
       <tr>

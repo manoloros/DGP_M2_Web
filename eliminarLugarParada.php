@@ -1,6 +1,6 @@
 
 <?php
-  $con = mysqli_connect("localhost","root","","sombrilla");
+  $con = mysqli_connect("localhost","dgppractica","dgp12345","dgp");
   
   // check if the 'id' variable is set in URL, and check that it is valid
   if (isset($_GET['id_ruta']) && is_numeric($_GET['id_parada'])) {

@@ -12,13 +12,15 @@
 <?php
   require("php/construyeCabecera.php");
 ?>
-
+<div id="textoinicio3" >
 <div class="contact-form">
-  <h3> Metodos de contacto</h3>
-  <div> Puedes contacar con nosotros a traves de los distintos medios de los que disponemos: </div>
+  <h3> Contáctecnos:</h3>
+  <div> Le responderemos con la mayor brevedad posible a cualquier duda que le pueda surgir</div>
+  <div> Puedes contactar con nosotros a traves de los distintos medios de los que disponemos: </div>
   <p></p>
   <div> Correo: granadago@gmail.com </div>
   <div> Telefono: 958 125 645 (Alberto)</div>
+</div>
 </div>
 </body>
 </html>
