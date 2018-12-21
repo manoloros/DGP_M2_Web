@@ -1,6 +1,6 @@
 <?php
   
-  $con = mysqli_connect("localhost","dgppractica","dgp12345","dgp");
+  $con = mysqli_connect("91.121.86.72","dgppractica","dgp12345","dgp");
   $id = $_GET['id'];
   
   // check if the 'id' variable is set in URL, and check that it is valid

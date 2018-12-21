@@ -3,7 +3,7 @@
   
   function login() {
   
-    $con = mysqli_connect("localhost","dgppractica","dgp12345","dgp");
+    $con = mysqli_connect("91.121.86.72","dgppractica","dgp12345","dgp");
   
     // Check connection
     if (mysqli_connect_errno())
